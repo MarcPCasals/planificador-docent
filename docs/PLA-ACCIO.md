@@ -157,8 +157,9 @@ Estat actual:
 
 - iteració 1: `COMPLETA` el 18 de setembre de 2026;
 - iteració 2: `COMPLETA` el 18 de setembre de 2026;
-- iteració 3: `EN CURS` des del 18 de setembre de 2026;
-- iteracions 4-20: `PENDENTS`.
+- iteració 3: `COMPLETA` el 18 de setembre de 2026;
+- iteració 4: `EN CURS` des del 18 de setembre de 2026;
+- iteracions 5-20: `PENDENTS`.
 
 La línia de base tècnica i els riscos oberts es registren al repositori d'AvaluaPro, a `docs/dev/LINIA-BASE-PLANIFICACIO.md`.
 
@@ -228,7 +229,7 @@ Lliurables:
 
 Criteri de tancament: les regles principals es poden provar sense interfície.
 
-Estat: `EN CURS`.
+Estat: `COMPLETA`. S'han definit 14 entitats amb identificadors estables i esquemes versionats, la separació entre UP base i aplicació per grup, els tres abasts de canvi, els horaris versionats, el pressupost de temps i els permisos sense escalada implícita. Les 15 proves de domini, el lint, la construcció i tota la suite de seguretat són correctes.
 
 #### Iteració 4 — Firestore, regles i consultes selectives
 
@@ -243,6 +244,8 @@ Lliurables:
 - proves d'autorització i denegació.
 
 Criteri de tancament: cap usuari pot llegir o modificar dades fora del seu permís.
+
+Estat: `EN CURS`.
 
 #### Iteració 5 — Local-first, offline i conflictes
 
