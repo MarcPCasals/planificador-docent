@@ -153,7 +153,12 @@ Cada iteració utilitzarà un únic estat: `PENDENT`, `EN CURS`, `BLOQUEJADA` o 
 - Un bloc només es tanca quan totes les seves iteracions estan `COMPLETES` i no té riscos crítics ajornats.
 - Si una iteració queda `BLOQUEJADA`, se'n registrarà la causa concreta i la condició necessària per reprendre-la.
 
-Estat inicial: iteracions 1-20 `PENDENTS`. En començar el desenvolupament, la iteració 1 passarà a `EN CURS`.
+Estat actual:
+
+- iteració 1: `EN CURS` des del 18 de setembre de 2026;
+- iteracions 2-20: `PENDENTS`.
+
+La línia de base tècnica i els riscos oberts es registren al repositori d'AvaluaPro, a `docs/dev/LINIA-BASE-PLANIFICACIO.md`.
 
 ### 7.2 Resum dels blocs
 
