@@ -17,6 +17,22 @@ Aquest document registra els serveis creats per al projecte. No implica que l'ap
 - App ID: `1:293346837907:web:6f2a282a9e5fd0c09f5466`
 - Measurement ID: `G-R56K0MTDFY`
 
+### Authentication
+
+- Proveïdor inicial: Google.
+- Política d'accés acordada: qualsevol compte de Google.
+- No es limitarà l'accés al domini `educand.ad`.
+- Cada usuari només podrà accedir al seu propi espai de dades mitjançant les regles de Firestore.
+
+Dominis que cal autoritzar per al Planificador:
+
+- `planificador-docent.firebaseapp.com`
+- `planificador-docent.web.app`
+- `localhost` durant el desenvolupament
+- `127.0.0.1` durant el desenvolupament
+
+AvaluaPro no s'ha d'afegir als dominis autoritzats del Planificador. La integració entre les dues aplicacions tindrà un contracte i uns permisos independents de Firebase Authentication.
+
 Configuració web facilitada:
 
 ```js
@@ -40,7 +56,7 @@ const analytics = getAnalytics(app)
 ## Encara pendent de decidir i configurar
 
 - Estructura definitiva de l'aplicació.
-- Firebase Authentication i proveïdor Google.
+- Activació i verificació del proveïdor Google a Firebase Authentication.
 - Firestore i model de col·leccions.
 - Regles de seguretat pròpies.
 - Índexs de Firestore.
@@ -49,4 +65,3 @@ const analytics = getAnalytics(app)
 - Contracte d'integració amb AvaluaPro.
 
 No s'ha de reutilitzar el projecte Firebase `eines-docents` ni el projecte `avaluapro` per a les dades del Planificador.
-
