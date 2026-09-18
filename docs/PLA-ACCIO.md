@@ -264,7 +264,7 @@ Lliurables:
 
 Criteri de tancament: un canvi offline es recupera i se sincronitza sense substituir una edició posterior.
 
-Estat: `COMPLETA`. Planificació té IndexedDB pròpia, cua persistent, càrrega per abast, comparació transaccional amb Firestore i resolució explícita de conflictes. Les 14 proves noves demostren que una edició offline sobreviu, una confirmació antiga no retira la nova i una modificació de l'iPad no és substituïda silenciosament.
+Estat: `COMPLETA`. Planificació té IndexedDB pròpia, cua persistent, càrrega per abast, comparació transaccional amb Firestore i resolució explícita de conflictes. Les 15 proves demostren que una edició offline sobreviu, una confirmació antiga no retira la nova, una modificació de l'iPad no és substituïda silenciosament i una fallada de lectura remota conserva la còpia local.
 
 ### Bloc 2 — Programació
 
@@ -282,6 +282,8 @@ Lliurables:
 
 Criteri de tancament: una UP buida es pot crear, desar, recarregar i arxivar.
 
+Estat: `COMPLETA`. La interfície publicada permet crear el curs, definir dates manuals de les UT i gestionar UP, fases i subfases amb desament local-first. Una prova integrada crea i recarrega una UP buida amb les tres fases inicials, l'arxiva i confirma que una edició antiga no pot substituir-ne la versió actual. La pantalla s'ha comprovat amb el compte autenticat en ordinador i mida iPad sense crear dades fictícies al compte real.
+
 #### Iteració 7 — Activitats, temps i cronologia
 
 Objectiu: construir els elements centrals de la seqüència.
@@ -296,6 +298,8 @@ Lliurables:
 - materials externs i agrupaments.
 
 Criteri de tancament: una seqüència completa es pot ordenar i validar sense Agenda.
+
+Estat: `EN CURS`.
 
 #### Iteració 8 — Currículum, avaluació i diversitat
 
