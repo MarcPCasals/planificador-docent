@@ -54,21 +54,38 @@ Curs acadèmic
 
 ## 4. Espais principals de l'aplicació
 
+La navegació principal mantindrà AvaluaPro cohesionat:
+
+- **Agenda** serà una entrada principal i obrirà la pantalla Avui.
+- **Programació** serà una entrada principal separada.
+- **Avaluació, Seguiment i Estadístiques** continuaran agrupats com en l'AvaluaPro actual.
+- **Tutoria** continuarà sent un botó diferenciat.
+- El grup actiu es mantindrà visible a la capçalera, amb el seu color.
+- Hi haurà l'opció **Tots els grups** per consultar la jornada i els recordatoris generals.
+
 ### 4.1 Avui
 
-Serà la pantalla inicial quan no hi hagi una classe imminent o activa. Mostrarà:
+Serà la pantalla inicial d'Agenda. No substituirà la pantalla general d'AvaluaPro ni apareixerà fora d'Agenda. Mostrarà:
 
 - sessions del dia;
 - pròxima classe;
 - materials que cal preparar;
-- recordatoris;
+- recordatoris d'avui i dels tres dies següents, encara que no coincideixin amb una classe d'avui;
 - recuperacions pendents;
 - tasques rellevants;
-- accés ràpid a Agenda, Programació i la cronologia completa de cada grup.
+- accés ràpid a la setmana completa i a la cronologia de cada grup.
 
 ### 4.2 Programació
 
 Contindrà la seqüència pedagògica ideal i substituirà el Programador Docent antic. Permetrà construir una UP completa, flexible i reordenable, amb el mateix contingut que direcció espera trobar en una programació.
+
+L'editor tindrà tres zones:
+
+- esquerra: esquema de fases i activitats;
+- centre: contingut de l'activitat seleccionada;
+- dreta: resum, indicadors, adaptacions i avisos.
+
+La zona dreta es podrà amagar per ampliar l'espai d'edició.
 
 ### 4.3 Agenda
 
@@ -186,11 +203,23 @@ Una activitat de 120 minuts continuarà sent una única activitat pedagògica, e
 
 La durada disponible de cada sessió vindrà de l'horari, amb possibilitat d'excepcions.
 
+Per defecte es reservaran cinc minuts de marge:
+
+- sessió de 60 minuts: 55 minuts programables;
+- sessió de 90 minuts: 85 minuts programables;
+- sessió de 120 minuts: 115 minuts programables.
+
 Cada sessió mostrarà:
 
 - minuts programats;
 - durada disponible;
 - avís visual quan s'apropa o supera el límit.
+
+Els llindars acordats són:
+
+- verd: fins al 85% del temps programable;
+- taronja: del 86% al 100%;
+- vermell: quan se supera el 100%.
 
 Si una activitat o continuació supera el temps disponible, el docent podrà:
 
@@ -199,7 +228,34 @@ Si una activitat o continuació supera el temps disponible, el docent podrà:
 
 L'aplicació podrà proposar les activitats finals que convindria moure, però no farà el canvi sense confirmació.
 
-Queden pendents de decidir els llindars exactes dels colors i si es reserva un marge fix per entrada, preparació i recollida.
+Les desviacions de temps real respecte del previst seran visibles per direcció com a part de l'aplicació real.
+
+### 10.1 Temporitzador opcional
+
+- Cada activitat temporitzada podrà activar un compte enrere amb un botó.
+- No farà cap so.
+- En arribar a zero continuarà comptant en positiu per mostrar l'excés.
+- En aturar-lo, el temps real passarà automàticament al resum.
+- El docent podrà indicar que l'activitat havia acabat abans de prémer el botó.
+- Hi haurà botons ràpids `Fa 1`, `Fa 2`, `Fa 5` i `Fa 10 minuts`, més l'opció **Altre**.
+- Finalitzar una activitat deixarà la següent preparada, però el nou temporitzador només començarà quan el docent premi **Comença**.
+
+### 10.2 Elements de la cronologia
+
+Una sessió podrà contenir tres tipus d'elements:
+
+1. **Activitat:** pot tenir temps, materials, adaptacions i seguiment.
+2. **Indicació:** recordatori breu sense temps, com ara «Agafar la bata».
+3. **Pausa o transició:** pot tenir temps, però no és una activitat pedagògica.
+
+Els elements sense temporització:
+
+- apareixeran en l'ordre correcte dins de la cronologia;
+- no sumaran minuts;
+- no afectaran el color del pressupost de temps;
+- es podran marcar com a completats.
+
+No es crearà una biblioteca d'indicacions reutilitzables.
 
 ## 11. Activitats fetes i continuacions
 
@@ -237,7 +293,15 @@ La pantalla mostrarà simultàniament:
 - registres de comportament;
 - notes i recordatoris.
 
-En iPad horitzontal es prioritzarà una disposició en dues columnes. En vertical, s'adaptarà sense perdre l'accés ràpid a l'alumnat.
+La prioritat de disseny serà l'ordinador. L'iPad tindrà una versió més compacta, però conservarà totes les accions essencials.
+
+El flux de l'alumnat serà:
+
+1. En entrar, activitats i llista d'alumnes apareixen simultàniament.
+2. El docent passa i confirma la llista.
+3. Després, els noms passen a un segon pla per deixar més espai a les activitats.
+4. Un botó torna a obrir el panell de l'alumnat per registrar absència, sortida, comportament o altres accions individuals.
+5. Un altre botó obre el seguiment de tasques quan la sessió conté activitats que generen evidència.
 
 ### 12.3 Resum final
 
@@ -334,12 +398,40 @@ Durant Mode aula, el docent podrà seleccionar un alumne i registrar un comporta
 - no serà visible per direcció dins de la programació;
 - podrà incloure una nota privada.
 
+S'utilitzaran les mateixes categories de comportament que ja existeixen a AvaluaPro. Apareixeran com a botons ràpids per evitar text lliure innecessari i mantenir registres homogenis. Es podran seleccionar diversos alumnes i aplicar-los el mateix registre.
+
 Hi haurà dos tipus de notes de sessió:
 
 - **Reflexió pedagògica:** visible per direcció com a part de l'aplicació real.
 - **Nota privada:** només visible per al docent autoritzat.
 
-Queden pendents de decidir les categories ràpides de comportament i si cal selecció múltiple d'alumnes.
+La selecció múltiple no impedirà revisar o completar després cada registre individual.
+
+### 17.1 Revisió posterior d'una activitat
+
+Després de fer una activitat, el botó **Revisar** permetrà modificar o afegir:
+
+- temps real;
+- comentari d'aplicació;
+- reflexió pedagògica;
+- materials que han faltat;
+- adaptacions que han funcionat o no;
+- recomanació de conservar, modificar o retirar l'activitat el curs següent.
+
+Els camps buits no generaran cap registre.
+
+La UP actual mostrarà en vermell les activitats que han durat més del previst, amb comparació per grup. Aquesta desviació serà visible per direcció.
+
+Quan es prepari la versió del curs següent, AvaluaPro proposarà millores basades en:
+
+- temps previst i temps real;
+- activitats que sovint han continuat;
+- activitats descartades en algun grup;
+- materials que han generat problemes o avisos;
+- adaptacions valorades com a útils;
+- comentaris de revisió.
+
+Les propostes es podran acceptar una a una o aplicar conjuntament després de seleccionar-les. Per defecte, la revisió real no modificarà silenciosament la UP base actual: generarà una proposta per a la versió següent, llevat que el docent decideixi aplicar-la immediatament.
 
 ## 18. Atenció a la diversitat
 
@@ -391,6 +483,11 @@ La persona convidada:
 - no podrà llegir notes personals ni incidències individuals;
 - no podrà obtenir diagnòstics complets a través de Programació.
 
+Disposarà de dues formes de consulta:
+
+- una vista interactiva de lectura per navegar, filtrar i consultar l'aplicació real;
+- una **Vista de document** amb l'estructura formal de la plantilla per visualitzar o imprimir.
+
 No s'utilitzaran enllaços públics. L'autorització s'aplicarà també a les regles de Firestore, no només a la interfície.
 
 ## 21. Seguretat i regles de Firebase
@@ -439,6 +536,8 @@ La nova experiència mantindrà cohesió amb AvaluaPro:
 - Mode aula optimitzat per ordinador i iPad;
 - mòbil amb operativa reduïda i ràpida.
 
+Les fases de preparació, resolució i tancament tindran colors suaus i fixos, coherents amb la paleta d'AvaluaPro. El color del grup continuarà sent la referència principal per identificar la classe.
+
 ## 24. Migració i protecció del llegat
 
 - L'Agenda Docent i el Programador Docent antics es conservaran intactes durant la transició.
@@ -463,14 +562,9 @@ La nova experiència mantindrà cohesió amb AvaluaPro:
 
 Aquestes qüestions s'han de resoldre abans de redactar el pla d'acció definitiu:
 
-1. Si una sessió de 60 minuts reserva automàticament un marge de preparació i recollida.
-2. Els percentatges exactes dels colors verd, taronja i vermell del pressupost de temps.
-3. Si Mode aula necessita un temporitzador opcional per activitat.
-4. Quines categories ràpides de comportament s'utilitzen i si inclouen registres positius i correctius.
-5. Si es poden seleccionar diversos alumnes alhora per registrar el mateix comportament.
-6. Si es registra temps real de les activitats per comparar-lo amb el temps previst en versions futures de la UP.
-7. Detall final del disseny de les pantalles Avui, Agenda, Programació i Mode aula.
-8. Model tècnic definitiu de col·leccions, permisos, càrrega selectiva i còpies.
-9. Pla de migració concret de les dades antigues.
-10. Ordre de desenvolupament, pilots, proves i desplegament.
-
+1. Detall visual final de cada pantalla i comportament en diferents resolucions.
+2. Model tècnic definitiu de col·leccions, permisos, càrrega selectiva i còpies.
+3. Pla de migració concret de les dades antigues.
+4. Ordre de desenvolupament, pilots, proves i desplegament.
+5. Com es configuraran i reutilitzaran horaris entre cursos acadèmics.
+6. Quins indicadors i resums comparatius tindrà Agenda per detectar desviacions entre grups i UP.
