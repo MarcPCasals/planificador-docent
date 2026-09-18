@@ -12,6 +12,7 @@ El projecte es troba en fase d'auditoria i definició funcional. Encara no s'ha 
 
 - [Auditoria funcional inicial](./AUDITORIA-INICIAL.md)
 - [Especificació funcional acordada](./docs/ESPECIFICACIO-FUNCIONAL-ACORDADA.md)
+- [Pla d'acció per blocs i iteracions](./docs/PLA-ACCIO.md)
 - [Infraestructura prevista](./docs/INFRAESTRUCTURA.md)
 
 ## Projectes de referència

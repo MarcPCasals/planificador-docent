@@ -4,13 +4,14 @@ Data de consolidació: 18 de setembre de 2026
 
 ## 1. Finalitat i estat del document
 
-Aquest document reuneix les decisions funcionals preses abans de començar la implementació. Ha de servir com a font de veritat per evitar que es perdi cap funció de les aplicacions antigues i per preparar, més endavant, un pla d'acció ordenat.
+Aquest document reuneix les decisions funcionals preses abans de començar la implementació. Ha de servir com a font de veritat per evitar que es perdi cap funció de les aplicacions antigues i per guiar el pla d'acció ordenat.
 
-Encara no és el pla d'implementació. Les decisions marcades com a acordades defineixen el producte; l'últim apartat recull les qüestions que encara cal acabar de decidir.
+Les decisions marcades com a acordades defineixen el producte. L'ordre d'implementació, els blocs complets, les proves i els criteris de tancament es troben a `docs/PLA-ACCIO.md`.
 
 Documents complementaris:
 
 - `AUDITORIA-INICIAL.md`: inventari fidel de l'Agenda Docent i el Programador Docent actuals.
+- `docs/PLA-ACCIO.md`: ordre de treball en 20 iteracions i definició de cada bloc.
 - `docs/INFRAESTRUCTURA.md`: situació dels repositoris i projectes Firebase.
 - Plantilles de referència facilitades pel docent:
   - `Instruccions UP Taller- Gener 2023.docx.pdf`;
@@ -730,13 +731,12 @@ Abans de la migració completa es farà un pilot amb:
 - Només hi haurà un tema visual clar.
 - En tancar sessió s'eliminarà la còpia local del dispositiu.
 
-## 26. Decisions encara obertes
+## 26. Decisions que es concretaran durant l'execució
 
-Aquestes qüestions s'han de resoldre abans de redactar el pla d'acció definitiu:
+L'ordre de desenvolupament, les proves i el desplegament ja estan definits a `docs/PLA-ACCIO.md`. Les qüestions següents es concretaran dins de la iteració indicada, quan ja disposem de la base necessària per decidir-les amb evidència:
 
-1. Model tècnic definitiu de col·leccions, permisos, càrrega selectiva i còpies.
-2. Mapa detallat de migració entre cada camp antic i el nou model.
-3. Ordre de desenvolupament, proves i desplegament.
-4. Selecció concreta del grup i la UP del pilot.
-5. Disseny visual detallat i prototip de cada pantalla abans d'implementar-la.
-6. Incorporació i classificació de les imatges pedagògiques originals quan el docent les faciliti.
+1. Model tècnic definitiu de col·leccions, permisos, càrrega selectiva i còpies: iteracions 3-5.
+2. Mapa detallat de migració entre cada camp antic i el nou model: iteració 20, preparat des de la iteració 3.
+3. Prototips detallats de les pantalles: abans d'implementar la pantalla corresponent, respectant el sistema visual acordat.
+4. Selecció concreta del grup i la UP del pilot: abans de la iteració 19.
+5. Incorporació i classificació de les imatges pedagògiques originals: iteració 17, quan el docent faciliti els fitxers.
