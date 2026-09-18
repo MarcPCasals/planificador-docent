@@ -155,8 +155,9 @@ Cada iteració utilitzarà un únic estat: `PENDENT`, `EN CURS`, `BLOQUEJADA` o 
 
 Estat actual:
 
-- iteració 1: `EN CURS` des del 18 de setembre de 2026;
-- iteracions 2-20: `PENDENTS`.
+- iteració 1: `COMPLETA` el 18 de setembre de 2026;
+- iteració 2: `EN CURS` des del 18 de setembre de 2026;
+- iteracions 3-20: `PENDENTS`.
 
 La línia de base tècnica i els riscos oberts es registren al repositori d'AvaluaPro, a `docs/dev/LINIA-BASE-PLANIFICACIO.md`.
 
@@ -192,6 +193,8 @@ Lliurables:
 
 Criteri de tancament: la sincronització actual queda demostrada i hi ha una còpia recuperable.
 
+Estat: `COMPLETA`. La línia de base inclou còpia validada, recuperació autenticada, sincronització de les 8 respostes sociomètriques, auditoria sense bloquejos i verificació en una pestanya nova.
+
 ### Bloc 1 — Fonaments modulars
 
 #### Iteració 2 — Carcassa, navegació i funcionalitats desactivables
@@ -207,6 +210,8 @@ Lliurables:
 - primers documents de decisió.
 
 Criteri de tancament: AvaluaPro continua funcionant igual i els nous espais es poden activar de manera controlada.
+
+Estat: `EN CURS`.
 
 #### Iteració 3 — Model de domini i identificadors
 
