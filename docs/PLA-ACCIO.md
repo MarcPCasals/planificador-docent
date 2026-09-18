@@ -158,8 +158,9 @@ Estat actual:
 - iteració 1: `COMPLETA` el 18 de setembre de 2026;
 - iteració 2: `COMPLETA` el 18 de setembre de 2026;
 - iteració 3: `COMPLETA` el 18 de setembre de 2026;
-- iteració 4: `EN CURS` des del 18 de setembre de 2026;
-- iteracions 5-20: `PENDENTS`.
+- iteració 4: `COMPLETA` el 18 de setembre de 2026;
+- iteració 5: `EN CURS` des del 18 de setembre de 2026;
+- iteracions 6-20: `PENDENTS`.
 
 La línia de base tècnica i els riscos oberts es registren al repositori d'AvaluaPro, a `docs/dev/LINIA-BASE-PLANIFICACIO.md`.
 
