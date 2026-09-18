@@ -156,8 +156,9 @@ Cada iteració utilitzarà un únic estat: `PENDENT`, `EN CURS`, `BLOQUEJADA` o 
 Estat actual:
 
 - iteració 1: `COMPLETA` el 18 de setembre de 2026;
-- iteració 2: `EN CURS` des del 18 de setembre de 2026;
-- iteracions 3-20: `PENDENTS`.
+- iteració 2: `COMPLETA` el 18 de setembre de 2026;
+- iteració 3: `EN CURS` des del 18 de setembre de 2026;
+- iteracions 4-20: `PENDENTS`.
 
 La línia de base tècnica i els riscos oberts es registren al repositori d'AvaluaPro, a `docs/dev/LINIA-BASE-PLANIFICACIO.md`.
 
@@ -211,7 +212,7 @@ Lliurables:
 
 Criteri de tancament: AvaluaPro continua funcionant igual i els nous espais es poden activar de manera controlada.
 
-Estat: `EN CURS`.
+Estat: `COMPLETA`. Agenda i Programació tenen carcasses separades i desactivades per defecte; les pantalles grans es carreguen de manera diferida i el paquet inicial s'ha reduït un 40,9%.
 
 #### Iteració 3 — Model de domini i identificadors
 
@@ -226,6 +227,8 @@ Lliurables:
 - exemples documentats.
 
 Criteri de tancament: les regles principals es poden provar sense interfície.
+
+Estat: `EN CURS`.
 
 #### Iteració 4 — Firestore, regles i consultes selectives
 
