@@ -164,6 +164,8 @@ La vista d'edició utilitzarà una interfície clara i actual. No cal imitar vis
 - En copiar-la es conservaran descripció, durada, materials, adaptacions i indicadors.
 - La còpia podrà recordar discretament de quina UP i curs provenia.
 - Les programacions històriques només es carregaran quan es consultin.
+- Una UP que ja tingui sessions, resultats o historial s'arxivarà en lloc d'eliminar-se directament.
+- L'eliminació definitiva només serà possible si no té aplicació real o després d'una confirmació que mostri clarament tot el contingut afectat.
 
 ## 8. UP base i aplicació per grups
 
@@ -198,6 +200,25 @@ L'aplicació podrà:
 7. crear les sessions només després de la confirmació del docent.
 
 Una activitat de 120 minuts continuarà sent una única activitat pedagògica, encara que es distribueixi en dues sessions de 60 minuts. Les parts conservaran el vincle amb l'activitat original.
+
+### 9.3 Classes extraordinàries
+
+Una classe extraordinària podrà:
+
+- consumir la pròxima sessió prevista de la UP i avançar tota la seqüència una posició;
+- o funcionar com una sessió independent de repàs, substitució o altra activitat sense modificar la seqüència.
+
+Abans de desplaçar la UP, l'Agenda mostrarà la distribució resultant i demanarà confirmació.
+
+### 9.4 Horari i calendari
+
+- Cada curs acadèmic tindrà un horari nou; no es copiarà automàticament el de l'any anterior.
+- L'horari es crearà en una graella setmanal arrossegant cada grup a la franja corresponent.
+- Cada franja podrà indicar dia, hora d'inici, durada, grup, assignatura i aula o espai opcional.
+- Els canvis d'horari tindran una data d'entrada en vigor i conservaran l'horari anterior per no alterar les sessions passades.
+- Les sessions de mig grup s'identificaran a l'horari i Mode aula mostrarà només els alumnes corresponents.
+- Els festius, vacances i dies no lectius s'introduiran manualment.
+- No cal un sistema específic d'horaris alternatius per setmanes especials.
 
 ## 10. Pressupost de temps
 
@@ -303,7 +324,19 @@ El flux de l'alumnat serà:
 4. Un botó torna a obrir el panell de l'alumnat per registrar absència, sortida, comportament o altres accions individuals.
 5. Un altre botó obre el seguiment de tasques quan la sessió conté activitats que generen evidència.
 
-### 12.3 Resum final
+### 12.3 Cronologia visual de la classe
+
+Mode aula tindrà una presentació semblant a un cronòmetre elegant i net, sense acumular targetes:
+
+- l'activitat actual apareixerà gran i directament sobre el fons;
+- les activitats següents apareixeran més petites a sota;
+- quan s'avanci, l'activitat acabada passarà a la part superior en format petit;
+- la nova activitat actual ocuparà el centre amb més jerarquia;
+- un punt discret separarà visualment cada activitat;
+- indicacions i transicions apareixeran dins de la mateixa seqüència;
+- la composició tindrà una estètica lleugera, precisa i inspirada en la simplicitat d'Apple, però coherent amb AvaluaPro.
+
+### 12.4 Resum final
 
 El resum final només necessita mostrar:
 
@@ -469,6 +502,14 @@ L'avís apareixerà el dia anterior per defecte. Cada material podrà tenir una 
 
 Els pendents continuaran visibles a Avui; els elements completats quedaran registrats sense molestar.
 
+No es crearà una biblioteca general de materials. Els materials seran:
+
+- descripcions;
+- enllaços externs a Drive, Classroom, YouTube o altres serveis;
+- referències a material físic.
+
+No es pujaran fitxers de materials a Firebase.
+
 ## 20. Accés de direcció
 
 Cada docent decidirà quina programació comparteix i introduirà el correu de la persona que hi pot accedir.
@@ -490,6 +531,16 @@ Disposarà de dues formes de consulta:
 
 No s'utilitzaran enllaços públics. L'autorització s'aplicarà també a les regles de Firestore, no només a la interfície.
 
+### 20.1 Coedició entre docents
+
+El propietari podrà convidar un altre docent mitjançant el seu correu exacte i escollir entre:
+
+- només lectura;
+- edició de la UP;
+- edició de la UP i gestió conjunta de l'Agenda dels grups compartits.
+
+Un coeditor podrà modificar informació general, fases, activitats, temps, materials, competències i indicadors. Només veurà noms, adaptacions individuals i aplicació real quan també tingui accés autoritzat al grup corresponent dins d'AvaluaPro.
+
 ## 21. Seguretat i regles de Firebase
 
 Caldrà ampliar i reorganitzar les regles de Firebase abans d'incorporar les dades noves.
@@ -503,6 +554,8 @@ Les regles hauran de distingir, com a mínim:
 - incidències i diagnòstics sota els permisos actuals d'AvaluaPro;
 - absències, tasques i comportaments associats a l'alumnat correcte;
 - denegació de lectures globals o per simple coincidència de domini de correu.
+- separació entre permisos de lectura, edició de la UP i gestió conjunta de l'Agenda;
+- verificació independent de l'accés a l'alumnat i a les adaptacions individuals.
 
 Cada regla nova tindrà proves d'accés permès i d'accés denegat.
 
@@ -521,9 +574,38 @@ Condicions acordades:
 - prova real autenticada de desament i recàrrega abans del pilot;
 - prova inicial amb una sola UP i un sol grup.
 
+Mode aula haurà de funcionar sense connexió per:
+
+- passar llista;
+- registrar tasques i comportaments;
+- escriure notes;
+- utilitzar el temporitzador;
+- marcar continuacions.
+
+Els canvis quedaran en una cua local persistent i se sincronitzaran quan torni la connexió.
+
+Si ordinador i iPad modifiquen dades alhora:
+
+- els canvis independents es fusionaran;
+- els canvis sobre el mateix element mostraran una comparació;
+- cap versió se substituirà silenciosament.
+
+El dispositiu s'utilitzarà com a dispositiu personal mentre la sessió sigui oberta, però en tancar sessió s'eliminarà sempre la còpia local de les dades.
+
+L'estat de sincronització serà sempre visible a la capçalera amb els estats:
+
+- Desat;
+- Desant;
+- Pendent;
+- Sense connexió;
+- Cal revisar;
+- Error.
+
+En clicar l'estat es podrà veure què queda pendent i l'última confirmació de Firebase.
+
 ## 23. Disseny visual
 
-La nova experiència mantindrà cohesió amb AvaluaPro:
+La nova experiència utilitzarà el mateix sistema de disseny que AvaluaPro. Ha de transmetre tres qualitats: **visual, atractiva i pràctica**.
 
 - tipografia i llenguatge visual compartits;
 - fons clars i targetes blanques;
@@ -533,10 +615,64 @@ La nova experiència mantindrà cohesió amb AvaluaPro:
 - botons prou grans per a iPad;
 - accions importants no dependents de passar el cursor;
 - alternativa a l'arrossegament quan sigui necessari;
-- Mode aula optimitzat per ordinador i iPad;
+- prioritat per a ordinador i adaptació compacta a iPad;
 - mòbil amb operativa reduïda i ràpida.
 
-Les fases de preparació, resolució i tancament tindran colors suaus i fixos, coherents amb la paleta d'AvaluaPro. El color del grup continuarà sent la referència principal per identificar la classe.
+Només hi haurà un tema visual clar i coherent; no es desenvoluparan temes alternatius ni mode fosc en aquesta fase.
+
+### 23.1 Sistema de colors
+
+- Violeta: Programació, UP, fases i vista documental, connectant amb les plantilles oficials.
+- Taronja: accions principals i continuïtat amb AvaluaPro.
+- Color del grup: context d'Agenda i Mode aula.
+- Verd, taronja i vermell: estats, temps i avisos.
+- Preparació, resolució i tancament: colors suaus i fixos de la paleta d'AvaluaPro.
+
+### 23.2 Icones i accions
+
+Les accions importants combinaran text amb una icona senzilla i elegant. Les icones sense text quedaran reservades a accions secundàries inequívocament reconeixibles.
+
+### 23.3 Agenda i pantalla Avui
+
+- Agenda obrirà Avui.
+- La columna esquerra mostrarà la cronologia de sessions, sense repetir-hi les activitats.
+- El panell dret mostrarà el detall complet de la sessió seleccionada.
+- Si el docent no selecciona cap sessió, mostrarà automàticament la pròxima classe programada.
+- Activitats, minuts i materials estaran sempre visibles.
+- Adaptacions, recuperacions i altres detalls s'obriran amb botons o blocs desplegables.
+
+### 23.4 Editor de Programació
+
+- Esquema compacte de fases i activitats a l'esquerra.
+- Editor ampli de l'activitat al centre.
+- Resum, indicadors, adaptacions i avisos a la dreta.
+- La zona dreta es podrà ocultar.
+- Els blocs de contingut principal, temps, materials, avaluació, diversitat i comentaris seran desplegables.
+- AvaluaPro recordarà quins blocs acostuma a tenir oberts el docent.
+- La reordenació es farà arrossegant des d'una nansa visible de tres línies; no s'afegiran botons Puja i Baixa.
+
+### 23.5 Mode aula
+
+- Ocuparà tota la finestra i reduirà la navegació general.
+- Mantindrà grup, assignatura, hora i una sortida clara de Mode aula.
+- La cronologia d'activitats tindrà el disseny net descrit a l'apartat 12.3.
+- El panell de l'alumnat reutilitzarà la mateixa disposició visual que AvaluaPro.
+- El seguiment de tasques reutilitzarà la graella actual d'AvaluaPro filtrada a les tasques de la sessió.
+
+### 23.6 Moviment i confirmacions
+
+- Les animacions seran simples, breus i elegants.
+- S'utilitzaran per obrir panells, moure activitats, confirmar un desament o entrar a Mode aula.
+- Els canvis ordinaris es desaran sense interrompre.
+- Copiar o completar mostrarà una confirmació petita.
+- Els moviments massius mostraran una previsualització.
+- Eliminar, sobreescriure o migrar requerirà una confirmació clara.
+
+### 23.7 Vista documental i imatges pedagògiques
+
+La Vista de document modernitzarà la plantilla oficial i la combinarà amb l'estil d'AvaluaPro, mantenint tots els camps requerits, les capçaleres violetes, l'orientació adequada, els salts de pàgina i la previsualització abans d'exportar a Word.
+
+Les imatges o icones oficials associades als tipus d'activitat i subfases s'afegiran quan el docent faciliti els fitxers originals d'una en una. L'aplicació reservarà un espai per seleccionar-les segons el tipus d'activitat, com motivació o adquisició d'aprenentatges. No se substituiran per imatges inventades sense revisar primer els originals.
 
 ## 24. Migració i protecció del llegat
 
@@ -546,6 +682,37 @@ Les fases de preparació, resolució i tancament tindran colors suaus i fixos, c
 - Es conservaran l'origen i la versió dels elements migrats.
 - Es validarà primer una UP completa.
 - No s'eliminarà ni substituirà informació antiga silenciosament.
+
+La nova versió admetrà:
+
+- enganxar taules des d'Excel o Numbers;
+- importar programacions Word emplenades;
+- importar JSON de l'Agenda i el Programador antics;
+- copiar activitats entre UP dins de l'aplicació;
+- exportar una UP a Word editable;
+- exportar una còpia JSON.
+
+Es crearà un convertidor que transformi totes les dades antigues en un JSON compatible amb el nou AvaluaPro.
+
+La importació:
+
+- mostrarà una previsualització abans d'escriure;
+- no sobreescriurà res silenciosament;
+- detectarà duplicats;
+- permetrà fusionar, conservar les dues versions o ignorar;
+- es podrà desfer com un únic bloc.
+
+### 24.1 Pilot
+
+Abans de la migració completa es farà un pilot amb:
+
+- un docent;
+- un grup;
+- una UP;
+- un horari;
+- dues o tres setmanes reals;
+- Programació, Agenda i Mode aula;
+- sincronització entre ordinador i iPad.
 
 ## 25. Límits ja decidits
 
@@ -557,14 +724,19 @@ Les fases de preparació, resolució i tancament tindran colors suaus i fixos, c
 - Una classe no oberta a Mode aula no es marcarà automàticament com a realitzada.
 - Els canvis de grup no alteraran la UP base sense decisió del docent.
 - Les dades històriques no es carregaran totes en iniciar l'aplicació.
+- No es pujaran fitxers de materials a Firebase.
+- No es crearà una biblioteca general de materials ni d'indicacions.
+- No s'utilitzaran notificacions externes del navegador o del sistema operatiu; els avisos apareixeran dins d'AvaluaPro.
+- Només hi haurà un tema visual clar.
+- En tancar sessió s'eliminarà la còpia local del dispositiu.
 
 ## 26. Decisions encara obertes
 
 Aquestes qüestions s'han de resoldre abans de redactar el pla d'acció definitiu:
 
-1. Detall visual final de cada pantalla i comportament en diferents resolucions.
-2. Model tècnic definitiu de col·leccions, permisos, càrrega selectiva i còpies.
-3. Pla de migració concret de les dades antigues.
-4. Ordre de desenvolupament, pilots, proves i desplegament.
-5. Com es configuraran i reutilitzaran horaris entre cursos acadèmics.
-6. Quins indicadors i resums comparatius tindrà Agenda per detectar desviacions entre grups i UP.
+1. Model tècnic definitiu de col·leccions, permisos, càrrega selectiva i còpies.
+2. Mapa detallat de migració entre cada camp antic i el nou model.
+3. Ordre de desenvolupament, proves i desplegament.
+4. Selecció concreta del grup i la UP del pilot.
+5. Disseny visual detallat i prototip de cada pantalla abans d'implementar-la.
+6. Incorporació i classificació de les imatges pedagògiques originals quan el docent les faciliti.
