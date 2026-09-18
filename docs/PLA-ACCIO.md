@@ -159,8 +159,9 @@ Estat actual:
 - iteració 2: `COMPLETA` el 18 de setembre de 2026;
 - iteració 3: `COMPLETA` el 18 de setembre de 2026;
 - iteració 4: `COMPLETA` el 18 de setembre de 2026;
-- iteració 5: `EN CURS` des del 18 de setembre de 2026;
-- iteracions 6-20: `PENDENTS`.
+- iteració 5: `COMPLETA` el 18 de setembre de 2026;
+- iteració 6: `EN CURS` des del 18 de setembre de 2026;
+- iteracions 7-20: `PENDENTS`.
 
 La línia de base tècnica i els riscos oberts es registren al repositori d'AvaluaPro, a `docs/dev/LINIA-BASE-PLANIFICACIO.md`.
 
@@ -230,7 +231,7 @@ Lliurables:
 
 Criteri de tancament: les regles principals es poden provar sense interfície.
 
-Estat: `COMPLETA`. S'han definit 14 entitats amb identificadors estables i esquemes versionats, la separació entre UP base i aplicació per grup, els tres abasts de canvi, els horaris versionats, el pressupost de temps i els permisos sense escalada implícita. Les 15 proves de domini, el lint, la construcció i tota la suite de seguretat són correctes.
+Estat: `COMPLETA`. S'han definit 15 entitats amb identificadors estables i esquemes versionats, la separació entre UP base i aplicació per grup, els tres abasts de canvi, els horaris versionats, el pressupost de temps i els permisos sense escalada implícita. Les 15 proves de domini, el lint, la construcció i tota la suite de seguretat són correctes.
 
 #### Iteració 4 — Firestore, regles i consultes selectives
 
@@ -246,7 +247,7 @@ Lliurables:
 
 Criteri de tancament: cap usuari pot llegir o modificar dades fora del seu permís.
 
-Estat: `EN CURS`.
+Estat: `COMPLETA`. Les dades privades del curs i calendari, les UP compartibles, les aplicacions per grup, les sessions, els resultats i les notes privades tenen rutes separades, consultes limitades, 12 índexs i regles publicades. Les 76 proves de regles són correctes i la versió publicada conserva l'accés als cinc grups reals.
 
 #### Iteració 5 — Local-first, offline i conflictes
 
@@ -262,6 +263,8 @@ Lliurables:
 - eliminació de la còpia local en tancar sessió.
 
 Criteri de tancament: un canvi offline es recupera i se sincronitza sense substituir una edició posterior.
+
+Estat: `COMPLETA`. Planificació té IndexedDB pròpia, cua persistent, càrrega per abast, comparació transaccional amb Firestore i resolució explícita de conflictes. Les 14 proves noves demostren que una edició offline sobreviu, una confirmació antiga no retira la nova i una modificació de l'iPad no és substituïda silenciosament.
 
 ### Bloc 2 — Programació
 
