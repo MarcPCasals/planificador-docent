@@ -299,9 +299,11 @@ Lliurables:
 
 Criteri de tancament: una seqüència completa es pot ordenar i validar sense Agenda.
 
-Estat: `EN CURS`.
+Estat: `COMPLETA`. La seqüència publicada permet crear, editar, eliminar i ordenar activitats, indicacions i transicions dins d'una fase o entre fases, tant amb ratolí com amb interacció tàctil. Calcula els minuts per fase i per UP, aplica els marges de 55/85/115 minuts, avisa de la sobrecàrrega i conserva agrupaments, espais i materials externs. El flux s'ha validat amb 17 proves de domini, 15 de sincronització local i 79 de regles, sense crear dades fictícies al compte real.
 
 #### Iteració 8 — Currículum, avaluació i diversitat
+
+Estat: `EN CURS`.
 
 Objectiu: completar els camps oficials de la UP.
 
