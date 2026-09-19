@@ -378,7 +378,7 @@ Criteri de tancament: una UP es pot calendaritzar sense duplicar ni perdre l'act
 
 #### Iteració 12 — Avui, setmana, cronologia i reajustaments
 
-Estat: `EN CURS`.
+Estat: `COMPLETA`. Agenda mostra la sessió actual o pròxima, recordatoris d'avui i tres dies, setmana i cronologia per grup. Les cancel·lacions retornen només els minuts afectats a la cua pendent; les continuacions es distribueixen amb previsualització; els canvis d'activitat ofereixen els tres abasts acordats; i les classes extraordinàries poden avançar la UP.
 
 Objectiu: completar el treball ordinari d'Agenda.
 
@@ -397,6 +397,8 @@ Criteri de tancament: el docent pot replanificar una setmana completa amb previs
 ### Bloc 4 — Mode aula
 
 #### Iteració 13 — Panell de classe, assistència i temporitzador
+
+Estat: `EN CURS`.
 
 Objectiu: fer usable la sessió real a l'aula.
 
