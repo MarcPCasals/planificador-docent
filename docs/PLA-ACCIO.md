@@ -303,7 +303,7 @@ Estat: `COMPLETA`. La seqüència publicada permet crear, editar, eliminar i ord
 
 #### Iteració 8 — Currículum, avaluació i diversitat
 
-Estat: `EN CURS`.
+Estat: `COMPLETA`. La UP publicada ja incorpora competències, aprenentatges esperats, criteris, indicadors, recursos i sabers amb una fotografia textual llegible i vincles opcionals a AvaluaPro. Les activitats poden associar indicadors i aplicar voluntàriament mesures de la biblioteca a alumnat seleccionat. El model descarta diagnòstics i notes personals abans de persistir, i les 80 proves de regles confirmen que direcció rep la mesura pedagògica sense aquests camps privats.
 
 Objectiu: completar els camps oficials de la UP.
 
@@ -318,6 +318,8 @@ Lliurables:
 Criteri de tancament: la UP conté tot el que direcció espera veure sense exposar informació privada.
 
 #### Iteració 9 — Versions, històric i millora anual
+
+Estat: `EN CURS`.
 
 Objectiu: permetre evolució entre cursos sense perdre el passat.
 
