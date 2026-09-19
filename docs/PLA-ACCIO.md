@@ -498,7 +498,7 @@ Criteri de tancament: una UP es pot consultar i obtenir en un format editable am
 
 #### Iteració 18 — Qualitat visual, accessibilitat i rendiment
 
-Estat: `EN CURS`.
+Estat: `COMPLETA`. L'auditoria visual ha comprovat Programació, el document oficial, Agenda i Mode aula en ordinador i en una finestra de 1024 × 768 px. Els diàlegs tenen nom accessible, focus retingut, tancament amb `Esc` i retorn al control d'origen; la seqüència es pot reordenar amb teclat; les pestanyes comparteixen un únic patró; i el Mode aula no conserva controls per sota de 24 × 24 px ni text visible per sota de 10 px a la pantalla principal auditada. Les 42 proves de domini, 18 de sincronització, 11 de classe i 84 de seguretat han passat, i la versió publicada s'ha verificat amb el compte real sense canvis pendents.
 
 Objectiu: polir el producte complet abans d'utilitzar-lo amb dades reals.
 
@@ -514,6 +514,8 @@ Lliurables:
 Criteri de tancament: els recorreguts principals es poden completar sense bloquejos ni informació ambigua.
 
 #### Iteració 19 — Pilot d'una UP i un grup
+
+Estat: `EN CURS`.
 
 Objectiu: validar comportament real durant dues o tres setmanes.
 
