@@ -438,7 +438,7 @@ Criteri de tancament: els registres actualitzen les estadístiques existents sen
 
 #### Iteració 15 — Absències, recuperació i preparació
 
-Estat: `EN CURS`.
+Estat: `COMPLETA`. Mode aula diferencia l'absència completa i la sortida a mitja sessió, associa les activitats perdudes a l'alumne i crea una recuperació pendent justificada sense penalitzar la constància. El docent disposa d'un text de correu editable i copiable, recordatoris vinculats a la pròxima classe, materials preparables amb antelació configurable i avisos d'adaptacions dins de l'activitat actual. Corregir una absència o la selecció d'activitats també corregeix els pendents relacionats.
 
 Objectiu: completar els casos reals de la sessió.
 
@@ -458,6 +458,8 @@ Criteri de tancament: un alumne absent pot recuperar una activitat sense rebre u
 ### Bloc 5 — Compartició i documents
 
 #### Iteració 16 — Direcció i coedició
+
+Estat: `EN CURS`.
 
 Objectiu: compartir sense exposar dades personals.
 
