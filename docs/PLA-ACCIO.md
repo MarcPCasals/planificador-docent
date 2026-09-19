@@ -361,7 +361,7 @@ Criteri de tancament: canviar l'horari no modifica les sessions passades.
 
 #### Iteració 11 — Assignació progressiva i distribució automàtica
 
-Estat: `EN CURS`.
+Estat: `COMPLETA`. Agenda connecta una UP amb un grup mitjançant una proposta progressiva o completa, reutilitza els minuts lliures de sessions ja previstes, divideix activitats llargues, manté indicacions sense temps, salta excepcions del calendari i només escriu després de la confirmació. Cada fragment conserva el vincle amb l'activitat original i les activitats ja assignades no es dupliquen.
 
 Objectiu: connectar la UP ideal amb les dates d'un grup.
 
@@ -377,6 +377,8 @@ Lliurables:
 Criteri de tancament: una UP es pot calendaritzar sense duplicar ni perdre l'activitat original.
 
 #### Iteració 12 — Avui, setmana, cronologia i reajustaments
+
+Estat: `EN CURS`.
 
 Objectiu: completar el treball ordinari d'Agenda.
 
