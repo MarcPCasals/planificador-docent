@@ -169,8 +169,10 @@ Estat actual:
 - iteració 12: `COMPLETA` el 19 de setembre de 2026;
 - iteració 13: `COMPLETA` el 19 de setembre de 2026;
 - iteració 14: `COMPLETA` el 19 de setembre de 2026;
-- iteració 15: `EN CURS` des del 19 de setembre de 2026;
-- iteracions 16-20: `PENDENTS`.
+- iteració 15: `COMPLETA` el 19 de setembre de 2026;
+- iteració 16: `COMPLETA` el 19 de setembre de 2026;
+- iteració 17: `EN CURS` des del 19 de setembre de 2026;
+- iteracions 18-20: `PENDENTS`.
 
 La línia de base tècnica i els riscos oberts es registren al repositori d'AvaluaPro, a `docs/dev/LINIA-BASE-PLANIFICACIO.md`.
 
@@ -459,7 +461,7 @@ Criteri de tancament: un alumne absent pot recuperar una activitat sense rebre u
 
 #### Iteració 16 — Direcció i coedició
 
-Estat: `EN CURS`.
+Estat: `COMPLETA`. Cada UP es pot compartir per correu exacte amb lectura de direcció, coedició del document base o Agenda limitada als grups seleccionats. La vista compartida separa la programació de l'aplicació real, les concessions i revocacions són atòmiques, i la sincronització conserva el propietari original quan edita un col·laborador. Les 84 proves de regles confirmen que direcció no pot editar, el coeditor no entra als grups i el col·laborador d'Agenda no pot obrir ni modificar cap grup no concedit.
 
 Objectiu: compartir sense exposar dades personals.
 
@@ -475,6 +477,8 @@ Lliurables:
 Criteri de tancament: direcció veu tot l'acordat i no pot llegir notes privades ni incidències individuals.
 
 #### Iteració 17 — Vista documental, Word i importacions
+
+Estat: `EN CURS`.
 
 Objectiu: unir el treball digital amb els formats del centre.
 
