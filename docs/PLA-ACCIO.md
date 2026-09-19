@@ -165,8 +165,11 @@ Estat actual:
 - iteració 8: `COMPLETA` el 19 de setembre de 2026;
 - iteració 9: `COMPLETA` el 19 de setembre de 2026;
 - iteració 10: `COMPLETA` el 19 de setembre de 2026;
-- iteració 11: `EN CURS` des del 19 de setembre de 2026;
-- iteracions 12-20: `PENDENTS`.
+- iteració 11: `COMPLETA` el 19 de setembre de 2026;
+- iteració 12: `COMPLETA` el 19 de setembre de 2026;
+- iteració 13: `COMPLETA` el 19 de setembre de 2026;
+- iteració 14: `EN CURS` des del 19 de setembre de 2026;
+- iteracions 15-20: `PENDENTS`.
 
 La línia de base tècnica i els riscos oberts es registren al repositori d'AvaluaPro, a `docs/dev/LINIA-BASE-PLANIFICACIO.md`.
 
@@ -398,7 +401,7 @@ Criteri de tancament: el docent pot replanificar una setmana completa amb previs
 
 #### Iteració 13 — Panell de classe, assistència i temporitzador
 
-Estat: `EN CURS`.
+Estat: `COMPLETA`. Agenda avisa cinc minuts abans i obre voluntàriament una pantalla de classe completa. La cronologia destaca l'activitat actual, admet indicacions sense temps, cronòmetre silenciós amb excés positiu i correcció retrospectiva, continuacions, assistència de grup o mig grup, i tancament local-first amb resum. Les absències actualitzen el registre existent d'AvaluaPro amb la durada real de la sessió.
 
 Objectiu: fer usable la sessió real a l'aula.
 
@@ -415,6 +418,8 @@ Lliurables:
 Criteri de tancament: una classe es pot iniciar, temporitzar i tancar sense sortir de Mode aula.
 
 #### Iteració 14 — Tasques, constància, comportament i notes
+
+Estat: `EN CURS`.
 
 Objectiu: connectar la classe amb els registres existents d'AvaluaPro.
 
