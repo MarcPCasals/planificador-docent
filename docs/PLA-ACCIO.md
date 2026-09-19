@@ -164,8 +164,9 @@ Estat actual:
 - iteració 7: `COMPLETA` el 19 de setembre de 2026;
 - iteració 8: `COMPLETA` el 19 de setembre de 2026;
 - iteració 9: `COMPLETA` el 19 de setembre de 2026;
-- iteració 10: `EN CURS` des del 19 de setembre de 2026;
-- iteracions 11-20: `PENDENTS`.
+- iteració 10: `COMPLETA` el 19 de setembre de 2026;
+- iteració 11: `EN CURS` des del 19 de setembre de 2026;
+- iteracions 12-20: `PENDENTS`.
 
 La línia de base tècnica i els riscos oberts es registren al repositori d'AvaluaPro, a `docs/dev/LINIA-BASE-PLANIFICACIO.md`.
 
@@ -342,7 +343,7 @@ Criteri de tancament: una versió nova es pot crear i modificar sense alterar l'
 
 #### Iteració 10 — Horari versionat i calendari manual
 
-Estat: `EN CURS`.
+Estat: `COMPLETA`. Agenda té una graella arrossegable amb sessions de 60, 90 i 120 minuts, mig grup i aula opcional; versions amb vigència i còpia segura; excepcions manuals per grup; persistència local-first i privacitat comprovada. Canviar l'horari conserva la versió anterior i no modifica les sessions ja creades.
 
 Objectiu: construir la base temporal.
 
@@ -359,6 +360,8 @@ Lliurables:
 Criteri de tancament: canviar l'horari no modifica les sessions passades.
 
 #### Iteració 11 — Assignació progressiva i distribució automàtica
+
+Estat: `EN CURS`.
 
 Objectiu: connectar la UP ideal amb les dates d'un grup.
 
