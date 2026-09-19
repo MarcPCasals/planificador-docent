@@ -168,8 +168,9 @@ Estat actual:
 - iteració 11: `COMPLETA` el 19 de setembre de 2026;
 - iteració 12: `COMPLETA` el 19 de setembre de 2026;
 - iteració 13: `COMPLETA` el 19 de setembre de 2026;
-- iteració 14: `EN CURS` des del 19 de setembre de 2026;
-- iteracions 15-20: `PENDENTS`.
+- iteració 14: `COMPLETA` el 19 de setembre de 2026;
+- iteració 15: `EN CURS` des del 19 de setembre de 2026;
+- iteracions 16-20: `PENDENTS`.
 
 La línia de base tècnica i els riscos oberts es registren al repositori d'AvaluaPro, a `docs/dev/LINIA-BASE-PLANIFICACIO.md`.
 
@@ -419,7 +420,7 @@ Criteri de tancament: una classe es pot iniciar, temporitzar i tancar sense sort
 
 #### Iteració 14 — Tasques, constància, comportament i notes
 
-Estat: `EN CURS`.
+Estat: `COMPLETA`. Mode aula activa les evidències finals o per sessió sobre les tasques existents d'AvaluaPro, dona per feta la presència i deixa l'absència exempta. El panell de classe incorpora selecció múltiple, botons sistemàtics de comportament, reflexió visible per direcció, nota privada del propietari i una revisió posterior completa. La mateixa evidència no es duplica i els registres alimenten les estadístiques existents.
 
 Objectiu: connectar la classe amb els registres existents d'AvaluaPro.
 
@@ -436,6 +437,8 @@ Lliurables:
 Criteri de tancament: els registres actualitzen les estadístiques existents sense duplicar sistemes.
 
 #### Iteració 15 — Absències, recuperació i preparació
+
+Estat: `EN CURS`.
 
 Objectiu: completar els casos reals de la sessió.
 
