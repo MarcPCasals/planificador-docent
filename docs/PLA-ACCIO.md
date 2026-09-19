@@ -171,8 +171,9 @@ Estat actual:
 - iteració 14: `COMPLETA` el 19 de setembre de 2026;
 - iteració 15: `COMPLETA` el 19 de setembre de 2026;
 - iteració 16: `COMPLETA` el 19 de setembre de 2026;
-- iteració 17: `EN CURS` des del 19 de setembre de 2026;
-- iteracions 18-20: `PENDENTS`.
+- iteració 17: `COMPLETA` el 19 de setembre de 2026;
+- iteració 18: `EN CURS` des del 19 de setembre de 2026;
+- iteracions 19-20: `PENDENTS`.
 
 La línia de base tècnica i els riscos oberts es registren al repositori d'AvaluaPro, a `docs/dev/LINIA-BASE-PLANIFICACIO.md`.
 
@@ -478,7 +479,7 @@ Criteri de tancament: direcció veu tot l'acordat i no pot llegir notes privades
 
 #### Iteració 17 — Vista documental, Word i importacions
 
-Estat: `EN CURS`.
+Estat: `COMPLETA`. Cada UP té una vista documental moderna i una exportació Word editable amb l'estructura oficial. El JSON versionat exclou permisos i identitats, i totes les importacions creen una còpia nova amb identificadors regenerats. El Word real del centre ha estat previsualitzat al navegador amb 3 fases, 14 subfases i 22 activitats; les taules d'Excel/Numbers creen fases, subfases i IA de manera coherent. Els recursos oficials es conserven per blocs i les imatges pedagògiques tenen un espai preparat fins que arribin els originals.
 
 Objectiu: unir el treball digital amb els formats del centre.
 
@@ -496,6 +497,8 @@ Criteri de tancament: una UP es pot consultar i obtenir en un format editable am
 ### Bloc 6 — Qualitat i pilot
 
 #### Iteració 18 — Qualitat visual, accessibilitat i rendiment
+
+Estat: `EN CURS`.
 
 Objectiu: polir el producte complet abans d'utilitzar-lo amb dades reals.
 
