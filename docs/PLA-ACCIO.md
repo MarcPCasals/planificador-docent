@@ -160,8 +160,12 @@ Estat actual:
 - iteració 3: `COMPLETA` el 18 de setembre de 2026;
 - iteració 4: `COMPLETA` el 18 de setembre de 2026;
 - iteració 5: `COMPLETA` el 18 de setembre de 2026;
-- iteració 6: `EN CURS` des del 18 de setembre de 2026;
-- iteracions 7-20: `PENDENTS`.
+- iteració 6: `COMPLETA` el 19 de setembre de 2026;
+- iteració 7: `COMPLETA` el 19 de setembre de 2026;
+- iteració 8: `COMPLETA` el 19 de setembre de 2026;
+- iteració 9: `COMPLETA` el 19 de setembre de 2026;
+- iteració 10: `EN CURS` des del 19 de setembre de 2026;
+- iteracions 11-20: `PENDENTS`.
 
 La línia de base tècnica i els riscos oberts es registren al repositori d'AvaluaPro, a `docs/dev/LINIA-BASE-PLANIFICACIO.md`.
 
@@ -319,7 +323,7 @@ Criteri de tancament: la UP conté tot el que direcció espera veure sense expos
 
 #### Iteració 9 — Versions, històric i millora anual
 
-Estat: `EN CURS`.
+Estat: `COMPLETA`. La duplicació anual crea una UP, fases, subfases i activitats amb identificadors nous, conserva la procedència i no hereta convidats. L'històric només es carrega quan s'obre i permet cercar activitats per número, títol o descripció i copiar-les sense alterar l'origen. El model ja compara temps previst i real per grup, genera propostes revisables i només aplica les que el docent accepta individualment o conjuntament. Les 81 proves de regles inclouen una còpia completa desada i confirmen que la versió anterior queda intacta.
 
 Objectiu: permetre evolució entre cursos sense perdre el passat.
 
@@ -337,6 +341,8 @@ Criteri de tancament: una versió nova es pot crear i modificar sense alterar l'
 ### Bloc 3 — Horari i Agenda
 
 #### Iteració 10 — Horari versionat i calendari manual
+
+Estat: `EN CURS`.
 
 Objectiu: construir la base temporal.
 
